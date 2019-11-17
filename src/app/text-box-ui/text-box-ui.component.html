@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row" >
+    <div class="col col-12" [formGroup]="polygonForm">
+        <div formArrayName="polygonArray">
+            <input (focus)="setSelected(i)" *ngFor="let point of arr.controls; let i=index" type="text" value="{{point.value}}" 
+            [formControlName]="i">
+        </div>
+    </div>
+  </div>
+    <div class="row">
+        <button (click)="addControl()"> (+)</button>
+        <button (click)="removeControl()">  (-)</button>
+    </div>
+    <div>
+      {{arr.value | json}}
+      {{selected | json}}
+    </div>
+</div>
