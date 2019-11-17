@@ -8,8 +8,9 @@
     </div>
   </div>
     <div class="row">
-        <button (click)="addControl()"> (+)</button>
-        <button (click)="removeControl()">  (-)</button>
+        <button class="btn btn-default" (click)="addControl()"> (+)</button>
+        <button class="btn btn-default" (click)="removeControl()">  (-)</button>
+        <button class="btn btn-important" (click)="onUpdate.emit(polygonForm.value)">update map</button>
     </div>
     <div>
       {{arr.value | json}}
